@@ -1,0 +1,25 @@
+{
+  "name": "fem--time-tracking-dashboard",
+  "version": "1.0.0",
+  "description": "![Design preview for the Time tracking dashboard coding challenge](./design/desktop-preview.jpg)",
+  "author": "mpbrunelle",
+  "license": "ISC",
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "dependencies": {
+    "gulp-cli": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "autoprefixer": "^10.4.0",
+    "browser-sync": "^2.27.7",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.3.11"
+  }
+}

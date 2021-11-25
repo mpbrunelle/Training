@@ -1,0 +1,39 @@
+:root {
+    /* Primary colors*/
+    --color-primary: hsl(246, 80%, 60%);
+
+    --color-work: hsl(15, 100%, 70%);
+    --color-play: hsl(195, 74%, 62%);
+    --color-study: hsl(348, 100%, 68%);
+    --color-exercise: hsl(145, 58%, 55%);
+    --color-social: hsl(264, 64%, 52%);
+    --color-self-care: hsl(43, 84%, 65%);
+
+    /* Neutral colors */
+
+    --color-very-dark-blue: hsl(226, 43%, 10%);
+    --color-dark-blue: hsl(235, 46%, 20%);
+    --color-desaturated-blue: hsl(235, 40%, 35%);
+    --color-pale-blue: hsl(236, 100%, 87%);
+    --color-white: hsl(0, 0%, 100%);
+
+    /* Typography */
+    --font-primary: "Rubik", sans-serif;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+
+    /* Layout */
+    --border-radius: calc(15 / 16 * 1rem);
+    --spacer: 1.5rem;
+    --card-width: calc(300 / 16 * 1rem);
+    --card-top-banner: calc(38 / 16 * 1rem);
+}
+
+@media (--large-viewport) {
+    :root {
+        --spacer: calc(30 / 16 * 1rem);
+        --card-top-banner: calc(45 / 16 * 1rem);
+        --card-width: calc(200 / 16 * 1rem);
+    }
+}

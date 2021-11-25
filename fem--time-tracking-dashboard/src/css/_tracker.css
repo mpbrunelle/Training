@@ -1,0 +1,108 @@
+.tracker {
+    margin-top: var(--spacer);
+    padding-top: var(--card-top-banner);
+    border-radius: var(--border-radius);
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 0.875rem);
+}
+
+.tracker--work {
+    background-color: var(--color-work);
+    background-image: url(../images/icon-work.svg);
+    background-position-y: -0.875rem;
+}
+
+.tracker--play {
+    background-color: var(--color-play);
+    background-image: url(../images/icon-play.svg);
+    background-position-y: -0.125rem;
+}
+
+.tracker--study {
+    background-color: var(--color-study);
+    background-image: url(../images/icon-study.svg);
+    background-position-y: -0.375rem;
+}
+
+.tracker--exercise {
+    background-color: var(--color-exercise);
+    background-image: url(../images/icon-exercise.svg);
+    background-position-y: 0;
+}
+
+.tracker--social {
+    background-color: var(--color-social);
+    background-image: url(../images/icon-social.svg);
+    background-position-y: -1rem;
+}
+
+.tracker--self-care {
+    background-color: var(--color-self-care);
+    background-image: url(../images/icon-self-care.svg);
+    background-position-y: -1rem;
+}
+
+.tracker__inner {
+    margin-bottom: -1px; /* to hide the background of the .tracker on  the bottom rounded corners. */
+    padding: var(--spacer);
+    border-radius: var(--border-radius);
+    background-color: var(--color-dark-blue);
+}
+
+.tracker__inner:hover {
+    cursor: pointer;
+    background-color: var(--color-desaturated-blue);
+}
+
+.tracker__header,
+.tracker__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tracker__options {
+    flex: 0 0 2rem;
+    height: 2rem;
+    background: transparent url(../images/icon-ellipsis.svg) no-repeat right
+        center;
+    border: 0;
+}
+
+.tracker__options:hover {
+    cursor: pointer;
+    filter: brightness(200%);
+}
+
+.tracker__title,
+.tracker__current,
+.tracker__previous {
+    margin: 0;
+}
+
+.tracker__title {
+    font-size: 1.125rem;
+}
+
+.tracker__current {
+    font-size: 2rem; /* fallback for clamp */
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    font-weight: var(--font-light);
+}
+
+@media (--large-viewport) {
+    .tracker {
+        line-height: 1.5;
+    }
+
+    .tracker__content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@supports (display: grid) {
+    .tracker {
+        margin-top: 0;
+    }
+}

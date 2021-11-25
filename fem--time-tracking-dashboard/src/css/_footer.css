@@ -1,0 +1,21 @@
+/* Footer ---------------------------------------------- */
+
+.attribution {
+    padding: 1em;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+.attribution a {
+    padding: 0 0.1em;
+    color: var(--color-pale-blue);
+    font-weight: var(--font-medium);
+}
+
+.attribution a:hover,
+.attribution a:focus,
+.attribution a:active {
+    background-color: var(--color-pale-blue);
+    color: var(--color-very-dark-blue);
+    text-decoration: none;
+}

@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: var(--spacer);
+    background-color: var(--color-very-dark-blue);
+    color: var(--color-white);
+}
+
+.container {
+    width: 100%;
+    max-width: calc(1110 / 16 * 1rem);
+    margin: 0 auto;
+}
+
+@supports (display: grid) {
+    body {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacer);
+    }
+
+    .page-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
+        gap: var(--spacer);
+    }
+
+    @media (--large-viewport) {
+        .container {
+            flex-direction: row;
+        }
+
+        .page-content {
+            flex: 1 1 100%;
+        }
+    }
+}

@@ -22,7 +22,7 @@
 .page-nav button:hover,
 .page-nav button:focus,
 .page-nav button:active,
-.page-nav button[aria-selected="true"] {
+.page-nav button[aria-current] {
     cursor: pointer;
     color: var(--color-white);
 }

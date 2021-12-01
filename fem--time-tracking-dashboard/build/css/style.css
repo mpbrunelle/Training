@@ -545,7 +545,7 @@ body {
 .page-nav button:hover,
 .page-nav button:focus,
 .page-nav button:active,
-.page-nav button[aria-selected="true"] {
+.page-nav button[aria-current] {
     cursor: pointer;
     color: hsl(0, 0%, 100%);
     color: var(--color-white);
@@ -634,6 +634,8 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .tracker__options {
     -webkit-box-flex: 0;

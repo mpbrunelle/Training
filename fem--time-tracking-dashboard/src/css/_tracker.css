@@ -43,8 +43,7 @@
 }
 
 .tracker__inner {
-    margin-bottom: -1px; /* to hide the background of the .tracker on  the bottom rounded corners. */
-    padding: var(--spacer);
+    padding: 1.5rem var(--spacer) var(--spacer) var(--spacer);
     border-radius: var(--border-radius);
     background-color: var(--color-dark-blue);
 }
@@ -59,18 +58,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .tracker__options {
     flex: 0 0 2rem;
     height: 2rem;
-    background: transparent url(../images/icon-ellipsis.svg) no-repeat right
-        center;
+    /* To align the ellipsis with the right side of the tracker 
+    while having a larger button. 21px is the width or the ellipsis. */
+    margin-right: calc((2rem - 21px) / -2);
+    background: transparent url(../images/icon-ellipsis.svg) no-repeat center;
     border: 0;
+    cursor: pointer;
 }
 
 .tracker__options:hover {
-    cursor: pointer;
     filter: brightness(200%);
 }
 
@@ -92,7 +94,7 @@
 
 @media (--large-viewport) {
     .tracker {
-        line-height: 1.5;
+        line-height: 1.6;
     }
 
     .tracker__content {

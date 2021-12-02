@@ -13,7 +13,7 @@
 
 .page-nav button {
     display: block;
-    padding: 0.5rem;
+    padding: 0.5rem 0;
     border: none;
     background: transparent;
     color: var(--color-pale-blue);
@@ -22,7 +22,7 @@
 .page-nav button:hover,
 .page-nav button:focus,
 .page-nav button:active,
-.page-nav button[aria-selected="true"] {
+.page-nav button[aria-current] {
     cursor: pointer;
     color: var(--color-white);
 }

@@ -1,6 +1,7 @@
 # Training
+
 Tests and experiments, Frontend Mentor challenges
 
-This repository contains different experiments to learn new techniques and languages in front-end development.
+This repository contains different experiments to learn and practice new techniques in front-end development.
 
-See [Frontend Mentor](https://www.frontendmentor.io/challenges)
+Each experiment has its own folder and branch.

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lab for front end development experimentation</title>
+	<style>
+		body {
+			margin: 0;
+			background-color: #f6f1ee;
+			font-family: Georgia, serif;
+			font-size: 100%;
+			line-height: 1.5;
+		}
+
+		main {
+			max-width: 65ch;
+			margin: 0 auto;
+			padding: 1rem;
+			color: #224258;
+			font-size: 1.25rem;
+		}
+
+		a {
+			padding: 0 0.125rem;
+			border-bottom: 1px solid #b9470f;
+			color: #b9470f;
+			font-weight: bolder;
+			text-decoration: none;
+		}
+
+		a:hover,
+		a:focus,
+		a:active {
+			background-color: #b9470f;
+			color: #fff;
+		}
+
+		nav ul {
+			padding: 0;
+			list-style: none;
+			border-top: 1px solid #b9470f;
+		}
+
+		nav a {
+			position: relative;
+			display: block;
+			padding: 1rem;
+		}
+
+		nav a:after {
+			content: "";
+			position: absolute;
+			right: 1rem;
+			top: calc((100% - 1rem) / 2);
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0.5rem 0 0.5rem 0.75rem;
+			border-color: transparent transparent transparent #b9480f;
+		}
+
+		nav a:hover:after,
+		nav a:focus:after,
+		nav a:active:after {
+			border-color: transparent transparent transparent #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<h1>Training for Front-End Development</h1>
+		<p>This site constitutes a “gym” to explore new techniques and learn about front-end development through
+			practice. It contains different challenges, mainly drawn from <a
+				href="https://www.frontendmentor.io">Front-End Mentor</a>.</p>
+		<nav>
+			<ul>
+				<li><a href="./fem--time-tracking-dashboard/build">Time Tracking Dashboard</a></li>
+			</ul>
+		</nav>
+	</main>
+</body>
+
+</html>

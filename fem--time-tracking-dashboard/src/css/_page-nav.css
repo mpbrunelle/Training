@@ -13,7 +13,7 @@
 
 .page-nav button {
     display: block;
-    padding: 0.5rem;
+    padding: 0.5rem 0;
     border: none;
     background: transparent;
     color: var(--color-pale-blue);

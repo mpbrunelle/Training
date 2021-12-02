@@ -72,17 +72,17 @@ const sanitizeAttribute = function (attribute) {
  * @param {string} selectedTimeframe Data from data.json.
  * @returns {string} [day|week|month] in p.tracker__previous
  */
-const previousTimeName = function (selectedTimeframe) {
+const previousTimeLabel = function (selectedTimeframe) {
     let name;
     switch (selectedTimeframe) {
         case "daily":
-            name = "day";
+            name = "Yesterday";
             break;
         case "weekly":
-            name = "week";
+            name = "Last Week";
             break;
         case "monthly":
-            name = "month";
+            name = "Last Month";
             break;
         default:
             name = "";
@@ -110,10 +110,9 @@ const displayData = function (trackerData, timeframe) {
         const currentTime = selectedTimeframe.current;
         const previousTime = selectedTimeframe.previous;
 
-        const output = `<article class="tracker tracker--${attribute}" aria-atomic="true">
-			<div class="tracker__inner">
+        const output = `<div class="tracker__inner">
 				<header class="tracker__header">
-				<h2 class="tracker__title"><span class="screen-reader-text">Time tracker for </span>${
+				<h2 class="tracker__title"><span class="screen-reader-text"></span>${
                     activity.title
                 }</h2>
 				<button class="tracker__options"><span class="screen-reader-text">Options for ${
@@ -121,18 +120,22 @@ const displayData = function (trackerData, timeframe) {
                 }</span></button>
 				</header>
 				<div class="tracker__content">
-				<p class="tracker__current">${currentTime}${currentTime < 2 ? "hr" : "hrs"}</p>
-				<p class="tracker__previous txt-small">Previous ${previousTimeName(
+				<p class="tracker__current" aria-label="Current time for ${
+                    activity.title
+                }">${currentTime}${currentTime < 2 ? "hr" : "hrs"}</p>
+				<p class="tracker__previous txt-small">${previousTimeLabel(
                     timeframe
                 )} - ${previousTime}${previousTime < 2 ? "hr" : "hrs"}</p>
 				</div>
-			</div>
-		</article>`;
+			</div>`;
 
         // Create the article elements,
+        // add classes and aria attibutes,
         // fill it with the appropriate content
         // and add it to the main.page-content.
         const trackerArticle = document.createElement("article");
+        trackerArticle.classList.add("tracker", `tracker--${attribute}`);
+        trackerArticle.setAttribute("aria-atomic", "true");
         trackerArticle.innerHTML = output;
         pageContent.appendChild(trackerArticle);
     });

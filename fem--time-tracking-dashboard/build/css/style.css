@@ -536,7 +536,7 @@ body {
 }
 .page-nav button {
     display: block;
-    padding: 0.5rem;
+    padding: 0.5rem 0;
     border: none;
     background: transparent;
     color: hsl(236, 100%, 87%);
@@ -610,9 +610,8 @@ body {
     background-position-y: -1rem;
 }
 .tracker__inner {
-    margin-bottom: -1px; /* to hide the background of the .tracker on  the bottom rounded corners. */
-    padding: 1.5rem;
-    padding: var(--spacer);
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    padding: 1.5rem var(--spacer) var(--spacer) var(--spacer);
     border-radius: calc(15 / 16 * 1rem);
     border-radius: var(--border-radius);
     background-color: hsl(235, 46%, 20%);
@@ -642,12 +641,14 @@ body {
         -ms-flex: 0 0 2rem;
             flex: 0 0 2rem;
     height: 2rem;
-    background: transparent url(../images/icon-ellipsis.svg) no-repeat right
-        center;
+    /* To align the ellipsis with the right side of the tracker 
+    while having a larger button. 21px is the width or the ellipsis. */
+    margin-right: calc((2rem - 21px) / -2);
+    background: transparent url(../images/icon-ellipsis.svg) no-repeat center;
     border: 0;
+    cursor: pointer;
 }
 .tracker__options:hover {
-    cursor: pointer;
     -webkit-filter: brightness(200%);
             filter: brightness(200%);
 }
@@ -667,7 +668,7 @@ body {
 }
 @media screen and (min-width: 64rem) {
     .tracker {
-        line-height: 1.5;
+        line-height: 1.6;
     }
 
     .tracker__content {

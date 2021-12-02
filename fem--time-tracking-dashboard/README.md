@@ -34,8 +34,8 @@ Expected behaviour:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   [Solution](https://github.com/mpbrunelle/training/tree/main/fem--time-tracking-dashboard)
+-   [Live Site](https://mpbrunelle.github.io/training/fem--time-tracking-dashboard/build/)
 
 ## My process
 

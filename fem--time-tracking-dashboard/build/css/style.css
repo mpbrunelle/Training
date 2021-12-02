@@ -683,7 +683,16 @@ body {
 }
 @supports (display: grid) {
     .tracker {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
         margin-top: 0;
+    }
+
+    .tracker__inner {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 100%;
+                flex: 1 1 100%;
     }
 }
 /* Footer ---------------------------------------------- */

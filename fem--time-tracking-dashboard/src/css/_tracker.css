@@ -105,6 +105,11 @@
 
 @supports (display: grid) {
     .tracker {
+        display: flex;
         margin-top: 0;
+    }
+
+    .tracker__inner {
+        flex: 1 1 100%;
     }
 }

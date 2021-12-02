@@ -34,7 +34,7 @@ Expected behaviour:
 
 ### Links
 
--   [Solution:](https://github.com/mpbrunelle/training/tree/main/fem--time-tracking-dashboard)
+-   [Solution](https://github.com/mpbrunelle/training/tree/main/fem--time-tracking-dashboard)
 -   [Live Site](https://mpbrunelle.github.io/training/fem--time-tracking-dashboard/build/)
 
 ## My process

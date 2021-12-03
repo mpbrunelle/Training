@@ -120,9 +120,9 @@ const displayData = function (trackerData, timeframe) {
                 }</span></button>
 				</header>
 				<div class="tracker__content">
-				<p class="tracker__current" aria-label="Current time for ${
+				<p class="tracker__current"><span class="screen-reader-text">Current time for ${
                     activity.title
-                }">${currentTime}${currentTime < 2 ? "hr" : "hrs"}</p>
+                }</span>${currentTime}${currentTime < 2 ? "hr" : "hrs"}</p>
 				<p class="tracker__previous txt-small">${previousTimeLabel(
                     timeframe
                 )} - ${previousTime}${previousTime < 2 ? "hr" : "hrs"}</p>

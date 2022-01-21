@@ -26,7 +26,7 @@
     /* Layout */
     --border-radius: calc(15 / 16 * 1rem);
     --spacer: 1.5rem;
-    --card-width: calc(300 / 16 * 1rem);
+    --card-width: calc(240 / 16 * 1rem);
     --card-top-banner: calc(38 / 16 * 1rem);
 }
 @media screen and (min-width: 64rem) {
@@ -427,9 +427,9 @@ body {
                 flex-direction: column;
     }
 
-    .page-content {
+    [role="tabpanel"]:not([hidden]) {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(calc(300 / 16 * 1rem), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(calc(240 / 16 * 1rem), 1fr));
         grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
         gap: 1.5rem;
         gap: var(--spacer);
@@ -452,6 +452,10 @@ body {
             margin: 0 0 0 1.5rem;
             margin: 0 0 0 var(--spacer);
         }
+
+        [role="tabpanel"]:not([hidden]) {
+            margin-top: 0;
+        }
     }
 }
 .page-header {
@@ -462,7 +466,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    min-width: calc(300 / 16 * 1rem);
+    min-width: calc(240 / 16 * 1rem);
     min-width: var(--card-width);
     border-radius: calc(15 / 16 * 1rem);
     border-radius: var(--border-radius);
@@ -520,23 +524,18 @@ body {
         }
     }
 }
-.page-nav {
+.tablist {
     padding: 1.5rem;
     padding: var(--spacer);
-}
-.page-nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    list-style: none;
     font-size: 1.125rem;
 }
-.page-nav button {
+.tablist button {
     display: block;
     padding: 0.5rem 0;
     border: none;
@@ -544,24 +543,30 @@ body {
     color: hsl(236, 100%, 87%);
     color: var(--color-pale-blue);
 }
-.page-nav button:hover,
-.page-nav button:focus,
-.page-nav button:active,
-.page-nav button[aria-current] {
+.tablist button:hover,
+.tablist button:focus,
+.tablist button:active,
+.tablist button[aria-current] {
     cursor: pointer;
+    color: hsl(0, 0%, 100%);
+    color: var(--color-white);
+}
+.tablist button[aria-selected="true"] {
     color: hsl(0, 0%, 100%);
     color: var(--color-white);
 }
 @supports (display: grid) {
     @media screen and (min-width: 64rem) {
-        .page-nav {
+        .tablist {
             padding: 1.5rem 2rem 2rem 2rem;
-        }
-        .page-nav__list {
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
                 -ms-flex-direction: column;
                     flex-direction: column;
+        }
+
+        .tablist button {
+            text-align: left;
         }
     }
 }
@@ -637,6 +642,7 @@ body {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    gap: 1rem;
 }
 .tracker__options {
     -webkit-box-flex: 0;

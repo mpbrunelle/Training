@@ -1,5 +1,9 @@
 "use strict";
 /**
+ * FOR REFERENCE ONLY: This script doesn't work anymore.
+ */
+
+ /** 
  * Gets the data and displays the initial view in main.page-content
  */
 const init = function () {

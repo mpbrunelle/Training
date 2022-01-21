@@ -1,17 +1,11 @@
-.page-nav {
+.tablist {
     padding: var(--spacer);
-}
-
-.page-nav__list {
     display: flex;
     justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    list-style: none;
     font-size: 1.125rem;
 }
 
-.page-nav button {
+.tablist button {
     display: block;
     padding: 0.5rem 0;
     border: none;
@@ -19,21 +13,27 @@
     color: var(--color-pale-blue);
 }
 
-.page-nav button:hover,
-.page-nav button:focus,
-.page-nav button:active,
-.page-nav button[aria-current] {
+.tablist button:hover,
+.tablist button:focus,
+.tablist button:active,
+.tablist button[aria-current] {
     cursor: pointer;
+    color: var(--color-white);
+}
+
+.tablist button[aria-selected="true"] {
     color: var(--color-white);
 }
 
 @supports (display: grid) {
     @media (--large-viewport) {
-        .page-nav {
+        .tablist {
             padding: 1.5rem 2rem 2rem 2rem;
-        }
-        .page-nav__list {
             flex-direction: column;
+        }
+
+        .tablist button {
+            text-align: left;
         }
     }
 }

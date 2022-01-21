@@ -29,7 +29,7 @@ body {
         flex-direction: column;
     }
 
-    .page-content {
+    [role="tabpanel"]:not([hidden]) {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
         gap: var(--spacer);
@@ -44,6 +44,10 @@ body {
         .page-content {
             flex: 1 1 100%;
             margin: 0 0 0 var(--spacer);
+        }
+
+        [role="tabpanel"]:not([hidden]) {
+            margin-top: 0;
         }
     }
 }

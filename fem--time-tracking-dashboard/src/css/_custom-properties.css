@@ -26,7 +26,7 @@
     /* Layout */
     --border-radius: calc(15 / 16 * 1rem);
     --spacer: 1.5rem;
-    --card-width: calc(300 / 16 * 1rem);
+    --card-width: calc(240 / 16 * 1rem);
     --card-top-banner: calc(38 / 16 * 1rem);
 }
 

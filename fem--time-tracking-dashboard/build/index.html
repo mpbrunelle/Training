@@ -10,7 +10,7 @@
 
   <title>Frontend Mentor | Time tracking dashboard</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
+  <script src="js/script-tablist.js" defer></script>
 </head>
 
 <body>
@@ -24,23 +24,252 @@
           Jeremy Robson
         </h1>
       </div>
-      <nav class="page-nav">
-        <ul class="page-nav__list" aria-controls="page-content">
-          <li class="page-nav__list-item"><button>Daily</button></li>
-          <li class="page-nav__list-item"><button aria-current="page">Weekly</button></li>
-          <li class="page-nav__list-item"><button>Monthly</button></li>
-        </ul>
-      </nav>
+      <div class="tablist" role="tablist">
+        <button role="tab" aria-controls="panel-daily" tabindex="-1">Daily</button>
+        <button role="tab" aria-controls="panel-weekly" aria-selected="true" tabindex="0">Weekly</button>
+        <button role="tab" aria-controls="panel-monthly" tabindex="-1">Monthly</button>
+      </div>
     </header>
 
-    <main id="page-content" class="page-content" aria-live="polite">
+    <main id="page-content" class="page-content">
 
+      <!-- PANEL DAILY ---------------------------------------- -->
+
+      <div id="panel-daily" class="panel-daily" role="tabpanel" tabindex="0" hidden>
+        <section class="tracker tracker--work">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Work</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">5hrs</p>
+              <p class="tracker__previous txt-small">Yesterday - 7hrs</p>
+            </div>
+          </div>
+        </section>
+        <section class="tracker tracker--play">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Play</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">1hr</p>
+              <p class="tracker__previous txt-small">Yesterday - 2hrs</p>
+            </div>
+          </div>
+        </section>
+        <section class="tracker tracker--study">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Study</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">0hrs</p>
+              <p class="tracker__previous txt-small">Yesterday - 1hr</p>
+            </div>
+          </div>
+        </section>
+        <section class="tracker tracker--exercise">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Exercise</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">1hr</p>
+              <p class="tracker__previous txt-small">Yesterday - 1hr</p>
+            </div>
+          </div>
+        </section>
+        <section class="tracker tracker--social">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Social</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">1hr</p>
+              <p class="tracker__previous txt-small">Yesterday - 3hrs</p>
+            </div>
+          </div>
+        </section>
+        <section class="tracker tracker--self-care">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Self Care</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">0hrs</p>
+              <p class="tracker__previous txt-small">Yesterday - 1hr</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- PANEL WEEKLY --------------------------------------- -->
+
+      <div id="panel-weekly" class="panel-weekly" role="tabpanel" tabindex="0">
+        <section class="tracker tracker--work">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Work</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">32hrs</p>
+              <p class="tracker__previous txt-small">Last week - 36hrs</p>
+            </div>
+          </div>
+        </section>
+        <section class="tracker tracker--play">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Play</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">10hr</p>
+              <p class="tracker__previous txt-small">Last week - 8hrs</p>
+            </div>
+          </div>
+        </section>
+        <section class="tracker tracker--study">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Study</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">4hrs</p>
+              <p class="tracker__previous txt-small">Last week - 7hr</p>
+            </div>
+          </div>
+        </section>
+        <section class="tracker tracker--exercise">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Exercise</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">4hr</p>
+              <p class="tracker__previous txt-small">Last week - 5hr</p>
+            </div>
+          </div>
+        </section>
+        <section class="tracker tracker--social">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Social</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">5hr</p>
+              <p class="tracker__previous txt-small">Last week - 10hrs</p>
+            </div>
+          </div>
+        </section>
+        <section class="tracker tracker--self-care">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Self Care</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">2hrs</p>
+              <p class="tracker__previous txt-small">Last week - 2hr</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- PANEL MONTHLY -------------------------------------- -->
+
+      <div id="panel-monthly" class="panel-monthly" role="tabpanel" tabindex="0" hidden>
+        <section class="tracker tracker--work">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Work</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">103hrs</p>
+              <p class="tracker__previous txt-small">Last month - 128hrs</p>
+            </div>
+          </div>
+        </section>
+        <section class="tracker tracker--play">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Play</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">23hr</p>
+              <p class="tracker__previous txt-small">Last month - 29hrs</p>
+            </div>
+          </div>
+        </section>
+        <section class="tracker tracker--study">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Study</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">13hrs</p>
+              <p class="tracker__previous txt-small">Last month - 19hr</p>
+            </div>
+          </div>
+        </section>
+        <section class="tracker tracker--exercise">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Exercise</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">11hr</p>
+              <p class="tracker__previous txt-small">Last month - 18hr</p>
+            </div>
+          </div>
+        </section>
+        <section class="tracker tracker--social">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Social</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">21hr</p>
+              <p class="tracker__previous txt-small">Last month - 23hrs</p>
+            </div>
+          </div>
+        </section>
+        <section class="tracker tracker--self-care">
+          <div class="tracker__inner">
+            <header class="tracker__header">
+              <h2 class="tracker__title">Self Care</h2>
+              <button class="tracker__options"><span class="screen-reader-text">Options</span></button>
+            </header>
+            <div class="tracker__content">
+              <p class="tracker__current">7hrs</p>
+              <p class="tracker__previous txt-small">Last month - 11hr</p>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
   </div>
 
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://studioquipo.com/en/">mpbrunelle</a>.
+    Coded by <a href="https://studioquipo.com/en/">mpbrunelle</a>. <a href="https://mpbrunelle.github.io/training/">More
+      challenges</a>
   </footer>
 
 </body>

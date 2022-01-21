@@ -1,0 +1,645 @@
+/* Andy Bell's Modern reset 
+ * https://piccalil.li/blog/a-modern-css-reset/
+ * with some additions
+=============================================== */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    background-color: var(--off-white);
+    color: var(--dark-grayish-blue);
+    font-family: var(--primary-font);
+    letter-spacing: -0.007em;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-inline: auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Fonts =============================================== */
+
+/* barlow-600 - latin */
+@font-face {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/barlow-v5-latin-600.eot"); /* IE9 Compat Modes */
+    src: local(""),
+        url("../fonts/barlow-v5-latin-600.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */ url("../fonts/barlow-v5-latin-600.woff2") format("woff2"),
+        /* Super Modern Browsers */ url("../fonts/barlow-v5-latin-600.woff")
+            format("woff"),
+        /* Modern Browsers */ url("../fonts/barlow-v5-latin-600.ttf")
+            format("truetype"),
+        /* Safari, Android, iOS */
+            url("../fonts/barlow-v5-latin-600.svg#Barlow") format("svg"); /* Legacy iOS */
+}
+
+/* fraunces-700 - latin */
+@font-face {
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/fraunces-v10-latin-700.eot"); /* IE9 Compat Modes */
+    src: local(""),
+        url("../fonts/fraunces-v10-latin-700.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */ url("../fonts/fraunces-v10-latin-700.woff2")
+            format("woff2"),
+        /* Super Modern Browsers */ url("../fonts/fraunces-v10-latin-700.woff")
+            format("woff"),
+        /* Modern Browsers */ url("../fonts/fraunces-v10-latin-700.ttf")
+            format("truetype"),
+        /* Safari, Android, iOS */
+            url("../fonts/fraunces-v10-latin-700.svg#Fraunces") format("svg"); /* Legacy iOS */
+}
+
+/* fraunces-900 - latin */
+@font-face {
+    font-family: "Fraunces";
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/fraunces-v10-latin-900.eot"); /* IE9 Compat Modes */
+    src: local(""),
+        url("../fonts/fraunces-v10-latin-900.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */ url("../fonts/fraunces-v10-latin-900.woff2")
+            format("woff2"),
+        /* Super Modern Browsers */ url("../fonts/fraunces-v10-latin-900.woff")
+            format("woff"),
+        /* Modern Browsers */ url("../fonts/fraunces-v10-latin-900.ttf")
+            format("truetype"),
+        /* Safari, Android, iOS */
+            url("../fonts/fraunces-v10-latin-900.svg#Fraunces") format("svg"); /* Legacy iOS */
+}
+
+/* Variables ============================================ */
+
+:root {
+    /* Colors ------------------------------------------- */
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --dark-desaturated-cyan: hsl(167, 40%, 24%);
+    --dark-blue: hsl(198, 62%, 26%);
+    --dark-moderate-cyan: hsl(168, 34%, 41%);
+    --light-moderate-cyan: hsl(168, 44%, 70%);
+
+    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --dark-grayish-blue: hsl(232, 10%, 55%);
+    --grayish-blue: hsl(210, 4%, 67%);
+    --off-white: hsl(34, 100%, 99%);
+    --white: hsl(0, 0%, 98%);
+
+    /* Typography -------------------------------------- */
+    --primary-font: "Barlow", sans-serif;
+
+    --secondary-font: "Fraunces", serif;
+    --fw-bold: 700;
+    --fw-black: 900;
+
+    /* Font sizes -------------------------------------- */
+    --fs-3: calc(12 / 16 * 1rem);
+    --fs-2: calc(14 / 16 * 1rem);
+    --fs-1: calc(15 / 16 * 1rem);
+    --fs0: 1rem;
+    --fs1: calc(18 / 16 * 1rem);
+    --fs2: calc(20 / 16 * 1rem);
+    --fs3: calc(28 / 16 * 1rem);
+    --fs4: calc(32 / 16 * 1rem);
+    --fs5: calc(40 / 16 * 1rem);
+    --fs6: calc(56 / 16 * 1rem);
+
+    --spacer-small: 1.5rem;
+    --spacer-large: 4rem;
+}
+
+/* Base styles ========================================= */
+body {
+    text-align: center;
+    overflow-x: hidden;
+}
+
+h1,
+h2 {
+    font-family: var(--secondary-font);
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    transition: color 0.2s ease-out;
+}
+
+/* Modules ============================================= */
+
+/* Page header ----------------------------------------- */
+
+.page-header {
+    position: relative;
+    height: 532px;
+    background: url(../images/mobile/image-header.jpg) no-repeat center bottom;
+    background-size: cover;
+}
+
+.page-header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem var(--spacer-small);
+}
+
+.main-nav li:last-child a {
+    padding: 0 2rem;
+    border-radius: 3rem;
+    color: var(--very-dark-desaturated-blue);
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
+}
+
+.bt-menu {
+    border: none;
+    background: transparent;
+}
+
+.page-header .logo {
+    fill: var(--white);
+}
+
+.page-header__title {
+    margin: clamp(3.5rem, 1rem + 10vw, 4rem) var(--spacer-small)
+        clamp(3.25rem, 1rem + 10vw, 7rem) var(--spacer-small);
+    color: var(--white);
+    font-size: clamp(var(--fs4), 1rem + 5vw, var(--fs6));
+    letter-spacing: 0.156em;
+    line-height: 1.225;
+    text-transform: uppercase;
+}
+
+@media (min-width: 30em) {
+    .page-header {
+        background-image: url(../images/desktop/image-header.jpg);
+        height: 800px;
+    }
+
+    .logo {
+        width: 170px;
+        height: 33px;
+    }
+}
+
+@media (max-width: 48em) {
+    .main-nav {
+        position: absolute;
+        top: 5.125rem;
+        left: var(--spacer-small);
+        right: var(--spacer-small);
+        padding: var(--spacer-small);
+        background: var(--white);
+        opacity: 0;
+        transition: opacity 0.2s ease-out;
+    }
+
+    .main-nav:before {
+        content: "";
+        position: absolute;
+        top: -24px;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 24px 24px;
+        border-color: transparent transparent var(--white) transparent;
+    }
+
+    .main-nav.is-open {
+        opacity: 1;
+    }
+
+    .main-nav a {
+        color: var(--very-dark-grayish-blue);
+        font-size: var(--fs2);
+        line-height: 2.8;
+    }
+
+    .main-nav li:last-child a {
+        display: inline-block;
+        margin-top: 0.25rem;
+        background-color: var(--yellow);
+        font-size: var(--fs-1);
+    }
+}
+
+@media (min-width: 48em) {
+    .main-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .main-nav li {
+        margin-left: 3rem;
+    }
+
+    .main-nav a {
+        color: var(--white);
+        font-size: var(--fs1);
+    }
+
+    .main-nav li:not(:last-child) a:hover,
+    .main-nav li:not(:last-child) a:focus {
+        color: var(--very-dark-desaturated-blue);
+    }
+
+    .main-nav li:last-child a {
+        background: var(--white);
+        line-height: 3.75;
+        transition: background-color 0.2s ease-out, color 0.2s ease-out;
+    }
+
+    .main-nav li:last-child a:hover,
+    .main-nav li:last-child a:focus {
+        color: var(--white);
+        background-color: hsla(0, 0%, 100%, 0.5);
+    }
+
+    .bt-menu {
+        display: none;
+    }
+}
+
+/* Presentation ---------------------------------------- */
+
+.service__content {
+    --section-text-color: var(--very-dark-desaturated-blue);
+    padding: var(--spacer-large) var(--spacer-small);
+}
+
+.service--top h2 {
+    margin-bottom: 1.5rem;
+    color: var(--very-dark-desaturated-blue);
+    font-size: var(--fs4);
+    line-height: calc(39 / 32);
+}
+
+.service--bottom {
+    padding-top: 105vw;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+.service--bottom .service__content {
+    max-width: 21.25rem;
+    margin: 0 auto;
+}
+
+.service--bottom h2 {
+    margin-bottom: 2rem;
+    font-size: var(--fs3);
+}
+
+.service--graphic-design {
+    background-image: url(../images/mobile/image-graphic-design.jpg);
+}
+
+.service--photography {
+    background-image: url(../images/mobile/image-photography.jpg);
+}
+
+.service__img {
+    background-color: violet;
+}
+.service--transform {
+    --section-color: var(--yellow);
+}
+.service--stand-out {
+    --section-color: var(--soft-red);
+}
+.service--graphic-design {
+    color: var(--dark-desaturated-cyan);
+}
+.service--photography {
+    color: var(--dark-blue);
+}
+
+.link-more {
+    display: inline-block;
+    position: relative;
+    margin-top: 2.25rem;
+    padding: 0 0.25rem;
+    font-family: var(--secondary-font);
+    color: var(--very-dark-desaturated-blue);
+    font-size: var(--fs-1);
+    font-weight: var(--fw-black);
+    letter-spacing: 0.066em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.link-more::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    z-index: -1;
+    border-radius: 1rem;
+    background-color: var(--section-color);
+    opacity: 0.25;
+    transition: opacity 0.2s ease-in;
+}
+
+.link-more:hover::before {
+    opacity: 1;
+}
+
+@media (min-width: 45em) {
+    .presentation {
+        display: grid;
+        grid-template-columns: repeat(2, 50vw);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .service {
+        display: grid;
+    }
+
+    .service__img img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .service--top .service__content {
+        align-self: center;
+    }
+
+    .service--top {
+        grid-column: 1 / 3;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: left;
+    }
+
+    .service--bottom {
+        padding-top: 50%;
+    }
+
+    .service--transform .service__content {
+        padding-left: 23%;
+        padding-right: 15%;
+    }
+
+    .service--stand-out .service__content {
+        padding-left: 15%;
+        padding-right: 23%;
+    }
+
+    .service--transform .service__img {
+        order: 1;
+    }
+
+    .service--graphic-design {
+        background-image: url(../images/desktop/image-graphic-design.jpg);
+    }
+
+    .service--photography {
+        background-image: url(../images/desktop/image-photography.jpg);
+    }
+}
+
+/* Testimonials ---------------------------------------- */
+
+.testimonials {
+    padding: var(--spacer-large) var(--spacer-small);
+}
+
+.testimonials h2 {
+    color: var(--grayish-blue);
+    font-size: var(--fs0);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+.quote {
+    margin-top: var(--spacer-large);
+    font-size: var(--fs1);
+}
+
+.quote__img {
+    border-radius: 50%;
+}
+
+.quote__block {
+    margin-top: 2rem;
+    line-height: 1.78;
+}
+
+.quote__author {
+    margin-top: 2.375rem;
+    font-style: normal;
+    font-weight: var(--fw-black);
+}
+
+.quote__author cite {
+    color: var(--very-dark-desaturated-blue);
+    font-family: var(--secondary-font);
+    font-style: normal;
+    font-weight: var(--fw-black);
+}
+
+.quote__function {
+    margin-top: 0.75rem;
+    font-size: var(--fs-2);
+}
+
+@media (min-width: 45em) {
+    .testimonials {
+        padding: clamp(1.5rem, 5vw, 10rem);
+    }
+
+    .testimonials__content {
+        display: flex;
+        gap: 1.875rem;
+    }
+}
+
+/* Gallery --------------------------------------------- */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Page footer ----------------------------------------- */
+
+.page-footer {
+    padding: var(--spacer-large) var(--spacer-small);
+    background-color: var(--light-moderate-cyan);
+}
+
+.page-footer,
+.page-footer a {
+    color: var(--dark-desaturated-cyan);
+}
+
+.page-footer__nav a {
+    color: var(--dark-desaturated-cyan);
+    opacity: 0.6;
+}
+
+.page-footer .logo,
+.icon {
+    fill: var(--dark-desaturated-cyan);
+}
+
+.page-footer a:hover,
+.page-footer a:focus,
+.page-footer .logo:hover,
+.page-footer .logo:focus,
+a:hover .icon,
+a:focus .icon {
+    color: var(--white);
+    fill: var(--white);
+    opacity: 1;
+}
+
+.page-footer__social {
+    margin-top: 6rem;
+}
+
+.page-footer__nav ul,
+.page-footer__social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.page-footer__nav a,
+.page-footer__social a {
+    padding: 1rem;
+}
+
+.attribution {
+    margin-top: var(--spacer-small);
+    font-size: var(--fs-3);
+}
+
+/* Icons =============================================== */
+
+.icon {
+    display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+    stroke-width: 0;
+}
+
+/* Utility classes ===================================== */
+/**
+ * Text meant only for screen readers.
+ * Re: word-wrap: Many screen reader and browser combinations announce broken
+ * words as they would appear visually.
+ */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+}

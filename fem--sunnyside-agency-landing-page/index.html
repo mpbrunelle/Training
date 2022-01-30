@@ -178,22 +178,24 @@
       </div>
     </div>
 
-    <ul class="gallery">
-      <li>
-        <img src="assets/images/mobile/image-gallery-milkbottles.jpg" alt="Milk bottles"
-          srcset="assets/images/mobile/image-gallery-milkbottles.jpg 376w, assets/images/desktop/image-gallery-milkbottles.jpg 720w"
-          sizes="(min-width: 30em) 25vw, 50vw">
-      </li>
-      <li><img src="assets/images/mobile/image-gallery-orange.jpg" alt="Orange slice on a white and blue plate"
-          srcset="assets/images/mobile/image-gallery-orange.jpg 376w, assets/images/desktop/image-gallery-orange.jpg 720w"
-          sizes="(min-width: 30em) 25vw, 50vw"></li>
-      <li><img src="assets/images/mobile/image-gallery-cone.jpg" alt="Waffle cone"
-          srcset="assets/images/mobile/image-gallery-cone.jpg 376w, assets/images/desktop/image-gallery-cone.jpg 720w"
-          sizes="(min-width: 30em) 25vw, 50vw"></li>
-      <li><img src="assets/images/mobile/image-gallery-sugar-cubes.jpg" alt="Sugar cubes"
-          srcset="assets/images/mobile/image-gallery-sugar-cubes.jpg 376w, assets/images/desktop/image-gallery-sugar-cubes.jpg 720w"
-          sizes="(min-width: 30em) 25vw, 50vw"></li>
-    </ul>
+    <div class="gallery">
+      <picture class="gallery__img">
+        <source media="(min-width: 36em)" srcset="assets/images/desktop/image-gallery-milkbottles.jpg ">
+        <img src="assets/images/mobile/image-gallery-milkbottles.jpg" alt="Milk bottles">
+      </picture>
+      <picture class="gallery__img">
+        <source media="(min-width: 36em)" srcset="assets/images/desktop/image-gallery-orange.jpg">
+        <img src="assets/images/mobile/image-gallery-orange.jpg" alt="Orange slice on a white and blue plate">
+      </picture>
+      <picture class="gallery__img">
+        <source media="(min-width: 36em)" srcset="assets/images/desktop/image-gallery-cone.jpg">
+        <img src="assets/images/mobile/image-gallery-cone.jpg" alt="Waffle cone">
+      </picture>
+      <picture class="gallery__img">
+        <source media="(min-width: 36em)" srcset="assets/images/desktop/image-gallery-sugar-cubes.jpg">
+        <img src="assets/images/mobile/image-gallery-sugar-cubes.jpg" alt="Sugar cubes">
+      </picture>
+    </div>
   </main>
 
   <footer class="page-footer">

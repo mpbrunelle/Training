@@ -546,6 +546,16 @@ nav a {
     list-style: none;
 }
 
+.gallery__img {
+    flex: 0 1 50%;
+}
+
+@media (min-width: 36em) {
+    .gallery__img {
+        flex: 0 1 25%;
+    }
+}
+
 /* Page footer ----------------------------------------- */
 
 .page-footer {
@@ -611,7 +621,7 @@ a:focus .icon {
     stroke-width: 0;
 }
 
-/* Utility classes ===================================== */
+/* Accessibility ===================================== */
 /**
  * Text meant only for screen readers.
  * Re: word-wrap: Many screen reader and browser combinations announce broken

@@ -10,6 +10,7 @@ This is a solution to the [Blogr landing page challenge on Frontend Mentor](http
     -   [Links](#links)
 -   [My process](#my-process)
     -   [Built with](#built-with)
+    -   [What I learned](#what-i-learned)
     -   [Useful resources](#useful-resources)
 -   [Author](#author)
 -   [Acknowledgments](#acknowledgments)
@@ -42,6 +43,10 @@ Users should be able to:
 -   CSS Grid
 -   Mobile-first workflow
 -   Accessibility
+
+### What I learned
+
+-   I have used much more utility classes than I usually do.
 
 ### Useful resources
 

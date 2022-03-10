@@ -23,8 +23,8 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
--   Solution: [Add solution URL here](https://github.com/mpbrunelle/training/tree/main/fem--profile-card-component)
--   Live Site: [Add live site URL here](https://mpbrunelle.github.io/training/fem--profile-card-component/)
+-   [Solution](https://github.com/mpbrunelle/training/tree/main/fem--profile-card-component)
+-   [Live Site](https://mpbrunelle.github.io/training/fem--profile-card-component/)
 
 ## My process
 

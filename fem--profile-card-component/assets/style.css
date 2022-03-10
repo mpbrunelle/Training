@@ -1,0 +1,159 @@
+:root {
+    --clr-accent: hsl(185, 75%, 39%);
+    --clr-neutral-dark: hsl(229, 23%, 23%);
+    --clr-neutral: hsl(227, 10%, 46%);
+    --clr-neutral-light: hsl(0, 0%, 59%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --fs-small: 0.875rem;
+    --fs-large: 1.125rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+p {
+    margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    min-height: 100vh;
+    /* background-image: url(images/bg-pattern-top.svg),
+        url(images/bg-pattern-bottom.svg); */
+    background-color: var(--clr-accent);
+    /* background-repeat: no-repeat;
+    background-position: -60% 270%, 150% -200%; */
+    color: var(--clr-neutral-dark);
+    font-family: "Kumbh Sans", sans-serif;
+    line-height: 1.6;
+    text-rendering: optimizeSpeed;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+
+    z-index: -1;
+}
+
+body::before {
+    top: 0;
+    left: 0;
+    width: 48%;
+    height: 58%;
+    background: url(images/bg-pattern-top.svg) no-repeat bottom right;
+}
+
+body::after {
+    bottom: 0;
+    right: 0;
+    width: 52%;
+    height: 52%;
+    background: url(images/bg-pattern-bottom.svg) no-repeat top left;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.txt-light {
+    color: var(--clr-neutral-light);
+}
+
+.fs-small {
+    font-size: var(--fs-small);
+}
+
+.fs-large {
+    font-size: var(--fs-large);
+}
+
+.card {
+    width: 86%;
+    max-width: 21.875rem;
+    margin: 0 auto;
+    padding: 8.75rem 0 0 0;
+    background: url(images/bg-pattern-card.svg) no-repeat;
+    border-radius: 1rem;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card__inner {
+    background-color: var(--clr-white);
+}
+
+.card__header {
+    position: relative;
+    padding: 4.5rem 1rem 1.5rem 1rem;
+    border-bottom: 1px solid var(--clr-neutral-light);
+}
+
+.card__img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border: 4px solid var(--clr-white);
+    border-radius: 50%;
+}
+
+.card__name {
+    font-size: 1.125rem;
+}
+
+.card__age {
+    color: var(--clr-neutral-light);
+    font-weight: 400;
+}
+
+.card__meta {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 1rem;
+    list-style: none;
+}
+
+.card__meta-item span {
+    display: block;
+}
+
+.card__info {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.attribution {
+    padding: 1rem;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--clr-white);
+}

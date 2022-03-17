@@ -1,0 +1,200 @@
+:root {
+    --clr-primary: hsl(238, 29%, 16%);
+    --clr-accent: hsl(14, 88%, 65%);
+
+    --clr-neutral-dark: hsl(237, 12%, 33%);
+    --clr-neutral: hsl(240, 6%, 50%);
+    --clr-neutral-light: hsl(240, 5%, 91%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --clr-gradient: linear-gradient(
+        to bottom,
+        hsl(273, 75%, 66%),
+        hsl(240, 73%, 65%)
+    );
+}
+
+/* Andy Bell's Modern reset ------------------ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+p {
+    margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr-gradient);
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+details summary {
+    cursor: pointer;
+    position: relative;
+}
+
+details summary > * {
+    display: inline;
+}
+
+summary {
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.card {
+    position: relative;
+    width: 87%;
+    max-width: 57.5rem;
+    margin: 0 auto;
+    padding: 7.875rem 1.5rem 3rem 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0px 30px 20px -10px rgba(0, 0, 0, 0.3);
+    background-color: var(--clr-white);
+}
+
+.card__img {
+    position: absolute;
+    top: -108px;
+    left: 0;
+    right: 0;
+    height: 212px;
+    background-image: url(images/bg-pattern-mobile.svg),
+        url(images/illustration-woman-online-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center, top center;
+}
+
+.card__title {
+    margin-bottom: 0.75rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.card__item {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--clr-neutral-light);
+}
+
+.card__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1.5rem;
+}
+
+.card__question::after {
+    content: "";
+    width: 10px;
+    height: 7px;
+    background: url(images/icon-arrow-down.svg) no-repeat;
+    transition: transform 0.25s linear;
+}
+
+.card__item[open] .card__question {
+    font-weight: 700;
+}
+
+.card__item[open] .card__question::after {
+    transform: rotate(180deg);
+}
+
+.card__item .card__answer {
+    margin-top: 1rem;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in, opacity 0.5s ease-out;
+}
+
+.card__item[open] .card__answer {
+    max-height: 5rem;
+    opacity: 1;
+}
+
+.attribution {
+    padding: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 57.5em) {
+    .card {
+        padding: 4.5rem 6rem 4.5rem 29.5rem;
+    }
+
+    .card__img {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 390px;
+        height: 100%;
+        background-image: url(images/illustration-woman-online-desktop.svg),
+            url(images/bg-pattern-desktop.svg);
+        background-position: right center, right 0 top 65%;
+    }
+
+    .card__img::after {
+        content: "";
+        position: absolute;
+        top: 40%;
+        left: -95px;
+        width: 191px;
+        height: 184px;
+        background: url(images/illustration-box-desktop.svg) no-repeat;
+    }
+
+    .card__title {
+        text-align: left;
+    }
+}

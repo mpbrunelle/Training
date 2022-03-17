@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [https://github.com/mpbrunelle/training/tree/main/fem--fem--faq-accordion-card](https://github.com/mpbrunelle/training/tree/main/fem--faq-accordion-card)
--   Live Site URL: [https://mpbrunelle.github.io/training/fem--faq-accordion-card](https://mpbrunelle.github.io/training/fem--faq-accordion-card)
+-   Solution URL: [https://github.com/mpbrunelle/training/tree/main/faq-accordion-card](https://github.com/mpbrunelle/training/tree/main/faq-accordion-card)
+-   Live Site URL: [https://mpbrunelle.github.io/training/faq-accordion-card](https://mpbrunelle.github.io/training/faq-accordion-card)
 
 ## My process
 

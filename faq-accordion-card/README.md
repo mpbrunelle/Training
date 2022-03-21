@@ -11,9 +11,9 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
 -   [My process](#my-process)
     -   [Built with](#built-with)
     -   [What I learned](#what-i-learned)
+    -   [Continued development](#continued-development)
     -   [Useful resources](#useful-resources)
 -   [Author](#author)
--   [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -73,6 +73,11 @@ details[open] summary::before {
 }
 ```
 
+### Continued development
+
+Learn to animate the opening and closing of accordion (it doesn't work with CSS only, js needed).
+See: [How to Animate the Details Element Using WAAPI](https://css-tricks.com/how-to-animate-the-details-element-using-waapi/)
+
 ### Useful resources
 
 -   [Two Issues Styling the Details Element and How to Solve Them](https://css-tricks.com/two-issues-styling-the-details-element-and-how-to-solve-them/)
@@ -83,7 +88,3 @@ details[open] summary::before {
 
 -   Website - [Studio Quipo](https://studioquipo.com/en/)
 -   Frontend Mentor - [@mpbrunelle](https://www.frontendmentor.io/profile/mpbrunelle)
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.

@@ -11,7 +11,6 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 -   [My process](#my-process)
     -   [Built with](#built-with)
     -   [What I learned](#what-i-learned)
-    -   [Continued development](#continued-development)
     -   [Useful resources](#useful-resources)
 -   [Author](#author)
 
@@ -59,9 +58,3 @@ filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.3));
 
 -   Website - [Studio Quipo](https://studioquipo.com/en/)
 -   Frontend Mentor - [@mpbrunelle](https://www.frontendmentor.io/profile/mpbrunelle)
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**

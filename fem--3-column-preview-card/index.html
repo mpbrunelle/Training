@@ -1,36 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
   <title>Frontend Mentor | 3-column preview card component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&family=Lexend+Deca&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-  
-  Sedans
-  Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
-  or on your next road trip.
 
-  SUVs
-  Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
-  and off-road adventures.
+  <main>
+    <h1 class="sr-only">3-column preview card component</h1>
+    <section class="preview">
+      <div class="preview__item preview--sedans">
+        <img class="preview__img" src="assets/images/icon-sedans.svg" alt="" aria-hidden="true">
+        <h2 class="preview__title">Sedans</h2>
+        <p class="preview__description">
+          Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
+          or on your next road trip.
+        </p>
+        <a href="#" class="preview__link">Learn more</a>
+      </div>
+      <div class="preview__item preview--suvs">
+        <img class="preview__img" src="assets/images/icon-suvs.svg" alt="" aria-hidden="true">
+        <h2 class="preview__title">SUVs</h2>
+        <p class="preview__description">
+          Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
+          and off-road adventures.
+        </p>
+        <a href="#" class="preview__link">Learn more</a>
+      </div>
+      <div class="preview__item preview--luxury">
+        <img class="preview__img" src="assets/images/icon-luxury.svg" alt="" aria-hidden="true">
+        <h2 class="preview__title">Luxury</h2>
+        <p class="preview__description">
+          Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury
+          rental and arrive in style.
+        </p>
+        <a href="#" class="preview__link">Learn more</a>
+      </div>
+    </section>
+  </main>
 
-  Luxury
-  Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
-  rental and arrive in style.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://studioquipo.com/en/">mpbrunelle</a>.<br><a href="../">Other challenges.</a>
+  </footer>
 </body>
+
 </html>

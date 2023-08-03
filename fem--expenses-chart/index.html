@@ -4,40 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Expenses chart component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/main.js" defer></script>
 </head>
 <body>
 
-  My balance
-  $921.48
+  <div class="expenses flow">
+    <header class="expenses__header flex bg-clr-primary">
+      <div class="expenses__balance">
+        <span class="txt-small txt-clr-neutral-200">My balance</span>
+        <strong class="txt-clr-neutral-100">$921.48</strong>
+      </div>
+      <img src="assets/images/logo.svg" width="" alt="">
+    </header>
 
-  Spending - Last 7 days
+    <section class="expenses__content bg-clr-neutral-100">
+      <h2 class="expenses__title txt-clr-neutral-900">Spending - Last 7 days</h2>
+      <ul class="chart">
+        <li class="chart__item" data-amount = "17.45">
+          <div class="chart__amount">$17.45</div> 
+          <div class="chart__bar"></div>
+          <p class="chart__label">mon</p>
+        </li>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
+        <li class="chart__item" data-amount = "34.91">
+          <div class="chart__amount">$34.91</div> 
+          <div class="chart__bar" ></div>
+          <p class="chart__label">tue</p>
+        </li>
 
-  Total this month
-  $478.33
+        <li class="chart__item"data-amount = "52.36">
+          <div class="chart__amount">$52.36</div> 
+          <div class="chart__bar" ></div>
+          <p class="chart__label">wed</p>
+        </li>
 
-  +2.4%
-  from last month
+        <li class="chart__item" data-amount = "31.07">
+          <div class="chart__amount">$31.07</div> 
+          <div class="chart__bar" ></div>
+          <p class="chart__label">thu</p>
+        </li>
+
+        <li class="chart__item" data-amount = "23.39">
+          <div class="chart__amount">$23.39</div> 
+          <div class="chart__bar" ></div>
+          <p class="chart__label">fri</p>
+        </li>
+
+        <li class="chart__item" data-amount = "43.28">
+          <div class="chart__amount">$43.28</div> 
+          <div class="chart__bar"></div>
+          <p class="chart__label">sat</p>
+        </li>
+
+        <li class="chart__item" data-amount = "25.48">
+          <div class="chart__amount">$25.48</div> 
+          <div class="chart__bar" ></div>
+          <p class="chart__label">sun</p>
+        </li>
+      </ul>
+
+      <hr class="separator">
+
+      <div class="expenses__summary flex">
+        <div class="expenses__montly-total">
+          <span class="txt-small">Total this month</span>
+          <strong class=" txt-clr-neutral-900">$478.33</strong>
+        </div>
+
+        <div class="expenses__variant">
+          <strong class=" txt-clr-neutral-900">+2.4%</strong>
+          <span class="txt-small">from last month</span>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://studioquipo.com/en">mpbrunelle</a>. <br>
+    <a href="../">Other challenges.</a>
   </div>
 </body>
 </html>

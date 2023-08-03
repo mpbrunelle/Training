@@ -3,5 +3,6 @@
 .DS_Store
 .prettierignore
 .vscode
+.cfg
 
 /node_modules
